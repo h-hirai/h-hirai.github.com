@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3c//DTD XHTML 1.1//EN"
+          "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xml:lang="ja">
+<head>
+<title>clock sample</title>
+<script type="text/javascript">
+<!--
+function time() {
+  dd = new Date();
+  document.getElementById('T1').textContent = dd.toLocaleString();
+  window.setTimeout('time()', 1000);
+}
+// -->
+</script>
+</head>
+<body onload="time()">
+  <svg:svg width="300" height="200">
+    <svg:text id="T1" x="20" y="100" font-size="20pt" />
+  </svg:svg>
+</body>
+</html>
