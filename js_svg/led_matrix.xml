@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3c//DTD XHTML 1.1//EN"
+          "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="ja">
+<head>
+<title>LED Matrix</title>
+<script type="text/javascript">
+function init_matrix() {
+  c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  c.setAttribute("cx", "5");
+  c.setAttribute("cy", "5");
+  c.setAttribute("r", "5");
+  c.setAttribute("stroke", "red");
+  c.setAttribute("fill", "white");
+  svg = document.getElementById('SVG');
+  svg.appendChild(c);
+}
+</script>
+</head>
+<body onload="init_matrix()">
+  <svg id="SVG"
+       xmlns="http://www.w3.org/2000/svg" version="1.1"
+       width="800" height="800" />
+</body>
+</html>
