@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3c//DTD XHTML 1.1//EN"
+          "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="ja">
+<head>
+<title>read text file</title>
+<script type="text/javascript"><![CDATA[
+function read_object_element() {
+    return window.frames[0].document.getElementsByTagName("pre")[0].textContent;
+}
+function append_read_data() {
+    pre = document.createElement("pre");
+    pre.textContent = read_object_element();
+    document.getElementById("body").appendChild(pre);
+}
+]]></script>
+</head>
+<body id="body" onclick="append_read_data()">
+<object data="./readfile.data" type="text/plain" />
+</body>
+</html>
