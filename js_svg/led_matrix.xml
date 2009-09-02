@@ -7,6 +7,12 @@
 <script type="text/javascript" src="./led_matrix.js" />
 </head>
 <body onload="init_matrix()">
-  <svg id="SVG" xmlns="http://www.w3.org/2000/svg" version="1.1" />
+  <svg id="SVG" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <style><![CDATA[
+      circle {stroke: red;}
+      circle.on {fill: red;}
+      circle.off {fill: white;}
+    ]]></style>
+  </svg>
 </body>
 </html>

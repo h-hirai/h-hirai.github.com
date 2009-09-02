@@ -16,8 +16,7 @@ function init_matrix() {
       c.setAttribute("cx", x * (led_r * 2) + led_r + margin);
       c.setAttribute("cy", y * (led_r * 2) + led_r + margin);
       c.setAttribute("r", led_r);
-      c.setAttribute("stroke", "red");
-      c.setAttribute("fill", "white");
+      c.setAttribute("class", "off");
       svg.appendChild(c);
     }
   }
