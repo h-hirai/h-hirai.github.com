@@ -7,8 +7,6 @@
 <script type="text/javascript" src="./led_matrix.js" />
 </head>
 <body onload="init_matrix()">
-  <svg id="SVG"
-       xmlns="http://www.w3.org/2000/svg" version="1.1"
-       width="80" height="80" />
+  <svg id="SVG" xmlns="http://www.w3.org/2000/svg" version="1.1" />
 </body>
 </html>
