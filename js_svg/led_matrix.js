@@ -1,10 +1,27 @@
+function switch_led(x, y, state) {
+  var c = document.getElementById("x" + x + "y" + y);
+  c.setAttribute("class", state);
+}
+
+function update_matrix() {
+  var nx = 8;
+  var ny = 8;
+
+  for (var y = 0; y < ny; y++) {
+    for (var x = 0; x < nx; x++){
+      switch_led(x, y, "on");
+    }
+  }
+}
+
 function init_matrix() {
   var led_r = 10;
   var nx = 8;
   var ny = 8;
   var margin = 1;
 
-  var svg = document.getElementById('SVG');
+  var svg = document.getElementById("SVG");
+  svg.onclick = update_matrix;
 
   svg.setAttribute("width", margin * 2 + (led_r * 2) * nx);
   svg.setAttribute("height", margin * 2 + (led_r * 2) * ny);
