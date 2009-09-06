@@ -1,5 +1,6 @@
 var NumX = 8;
 var NumY = 8;
+var Interval = 100;
 
 function switch_led(x, y, state) {
     var c = document.getElementById("x" + x + "y" + y);
@@ -30,7 +31,7 @@ function load_data() {
     setInterval(function() {
                     update_matrix(sig_seq[cnt_seq]);
                     cnt_seq = cnt_seq >= sig_seq.length - 1 ? 0 : cnt_seq + 1;
-                }, 100);
+                }, Interval);
 }
 
 function init_matrix() {
