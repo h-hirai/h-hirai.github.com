@@ -9,14 +9,8 @@ function switch_led(x, y, state) {
 
 function update_matrix(sig) {
     for (var y = 0; y < NumY; y++) {
-        if (sig[y + 8] == "1") {
-            for (var x = 0; x < NumX; x++) {
-                switch_led(x, y, sig[x] == "1" ? "on" : "off");
-            }
-        } else {
-            for (var x = 0; x < NumX; x++) {
-                switch_led(x, y, "off");
-            }
+        for (var x = 0; x < NumX; x++) {
+            switch_led(x, y, sig[x] == "1" && sig[y + 8] == "1" ? "on" : "off");
         }
     }
 }
