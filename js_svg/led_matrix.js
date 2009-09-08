@@ -22,10 +22,17 @@ function load_data() {
 
     var sig_seq = req.responseText.split("\n");
     var cnt_seq = 0;
-    setInterval(function() {
-                    update_matrix(sig_seq[cnt_seq]);
-                    cnt_seq = cnt_seq >= sig_seq.length - 1 ? 0 : cnt_seq + 1;
-                }, Interval);
+    var timerId = setInterval(
+        function() {
+            update_matrix(sig_seq[cnt_seq]);
+            cnt_seq = cnt_seq >= sig_seq.length - 1 ? 0 : cnt_seq + 1;
+        }, Interval);
+
+    document.getElementById("SVG").onclick =
+        function() {
+            clearInterval(timerId);
+            document.getElementById("SVG").onclick = load_data;
+        }
 }
 
 function init_matrix() {
