@@ -28,11 +28,10 @@ function load_data() {
             cnt_seq = cnt_seq >= sig_seq.length - 1 ? 0 : cnt_seq + 1;
         }, Interval);
 
-    document.getElementById("SVG").onclick =
-        function() {
-            clearInterval(timerId);
-            document.getElementById("SVG").onclick = load_data;
-        }
+    document.getElementById("SVG").onclick = function() {
+        clearInterval(timerId);
+        document.getElementById("SVG").onclick = load_data;
+    };
 }
 
 function init_matrix() {
